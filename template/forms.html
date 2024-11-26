@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms</title>
+</head>
+<body>
+<fieldset style="width=10px; ">
+  <legend>Personal Info</legend>
+  <form>
+    <label for="firstName" >First Name</label><br>
+    <input placeholder="Enter First Name" type="text" id="firstName" required>
+    <br><br>
+
+    <label for="lastName">Last Name </label><br>
+    <input placeholder="Enter Last Name" type="text" id="lastName" required>
+    <br><br>
+
+    <label for="mail">Email</label><br>
+    <input placeholder="Enter Email" type="email" id="mail" required>
+    <br><br>
+
+    <label for="age">Age</label><br>
+    <input placeholder="Age" type="number" id="age" required min="18" max="25">
+    <br><br>
+
+    <label for="password"></label><br>
+    <input placeholder="Enter your Password" type="password" id="password" title="Enter 6 digit password">
+    <br><br>
+
+    <label for="dob">Date of Birth</label><br>
+    <input placeholder="Select your DOB" type="date" id="dob" name="dob" required>
+    <br><br>
+
+    <label for="time">Login Time</label><br>
+    <input type="time" id="time" name="time" required>
+    <br><br>
+
+    <label>Select Skills:</label><br>
+    <input type="checkbox" value="java">Java Programming<br>
+    <input type="checkbox" value="sql">SQL (Structured Query Language)<br>
+    <input type="checkbox" value="apti">Aptitude<br>
+    <input type="checkbox" value="mt">Manual Testing<br>
+    <br><br>
+
+    <label>Select Gender:</label><br>
+    <input type="radio" name="gender" value="male"> male
+    <input type="radio" name="gender" value="female"> female
+    <input type="radio" name="gender" value="other"> Other
+    <br><br>
+
+    <label>Upload Resume</label>
+    <input type="file" accept=".jpg, .png, .pdf">
+    <br><br>
+
+    <label>select amount Range</label>
+    <input type="range" min="10" max="100">
+    <br><br>
+    <label>Select City</label>
+    <br>
+    <select name="city">
+      <option value="hyd">HYD</option>
+      <option value="ban">BANG</option>
+      <option value="ap">AP</option>
+      <option value="mp">MP</option>
+      <option value="up">UP</option>
+    </select>
+    <br><br>
+
+    <label>Any Suggestions</label>
+    <textarea placeholder="Give your suggestions here"></textarea>
+    <input type= "submit">
+    <br>
+    <input type="reset" value="Reset">
+  </form>
+</fieldset>
+
+</body>
+</html>

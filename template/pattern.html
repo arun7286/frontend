@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patterns using RegExp</title>
+</head>
+<body>
+<fieldset>
+    <legend>Validation</legend>
+    <form>
+        <label>First Name </label>
+        <input type="text" pattern="[a-zA-Z]{2,8}" title="Should be Characters">
+        <br><br>
+        <label>Password</label>
+        <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[/d])(?=.*[!@#$%^&*()])[A-Za-z/d!@#$%^&*()]{8,}$">
+
+        <button><input type="submit">
+
+        </button>
+    </form>
+</fieldset>
+
+
+</body>
+</html>
