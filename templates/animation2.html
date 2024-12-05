@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation2</title>
+    <style>
+        p {
+            border: 3px solid black;
+            height: 200px;width: 200px;
+            border-radius: 10px;
+            animation-name: multicolor;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        div {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        @keyframes multicolor {
+            0% {
+                background-color: red;
+                transform: translateX(0px);
+            }
+
+            10% {
+                background-color: #a37070;
+                transform: translateX(400px);
+            }
+
+            20% {
+                background-color: rgba(74, 115, 61, 0.94);
+                transform: translate(400px, 400px);
+            }
+
+            40% {
+                background-color: rgba(200, 161, 66, 0.94);
+                transform: translate(400px, 400px);
+            }
+
+            60% {
+                background-color: rgb(94, 136, 174);
+                transform: translate(200px, 400px);
+            }
+
+            80% {
+                background-color: rgba(245, 245, 245, 0.94);
+                transform: translate(0px, 400px);
+            }
+
+            100% {
+                background-color: rgba(71, 8, 27, 0.76);
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+</div>
+</body>
+</html>

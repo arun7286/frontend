@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .outer {
+            border:3px solid maroon;
+            background-color: rgba(159, 205, 148, 0.94);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .outer div {
+            border:5px solid green;
+            background-color: rgba(200, 161, 66, 0.94);
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .p6 {
+            /*grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2; */
+            grid-row: 1/4;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(159, 205, 148, 0.94);
+            height: 100vh;
+            border-radius: 10px;
+            border: 5px solid maroon;
+            margin: 10px;
+        }
+        .product {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="p1">Product 1</div>
+    <div class="p2">Product 2</div>
+    <div class="p3">Product 3</div>
+    <div class="p4">Product 4</div>
+    <div class="p5">Product 5</div>
+    <div class="p6">Product 6</div>
+</div>
+
+
+
+<div class="grid-container">
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Price: $20</p>
+    </div>
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Price: $30</p>
+    </div>
+    <div class="product">
+        <h2>Product 3</h2>
+        <p>Price: $40</p>
+    </div>
+    <div class="product">
+        <h2>Product 4</h2>
+        <p>Price: $50</p>
+    </div>
+</div>
+
+
+</body>
+</html>

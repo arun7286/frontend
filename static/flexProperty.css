@@ -1,0 +1,25 @@
+body {
+    font-size: large;
+    background-color: #e9edf3;
+}
+div {
+    height: 50px;
+    display: flex;
+    border: 3px dotted #a37070;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(74, 115, 61, 0.94);
+}
+a {
+
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: cursive;
+    color: white;
+}
+a:hover {
+    border: 1px solid #373737;
+    background-color: #a37070;
+    font-weight: bold;
+}
