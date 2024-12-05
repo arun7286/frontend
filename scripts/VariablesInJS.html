@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables in JS</title>
+</head>
+<body>
+<pre>
+  items = 0;
+  console.log(items, typeof items);
+
+  /* 1. In Js as a programmer we don't need to declare data types for variables.
+     2. Js itself will assign the data type for variables based on the value which we have stored in it.
+  */
+
+  /* In JavaScript, there are three main ways to declare a variable:
+    1.---- var – an older way of declaring variables; it’s best avoided in modern JavaScript due to potential scope issues
+          ---- The variable which are declared using var can be accessed inside the same block and outside the block as well.
+   */
+  {
+    var product = 20;
+    console.log(product);
+  }
+  product = 400;
+  console.log(product);
+
+  /*
+    2.---- let – used to declare a variable that can be reassigned.
+      ---- the variables declared using let can be accessed and can be re-assigned with in the same block.
+   */
+  {
+    let product_count = 300;
+    console.log("Product count is ",product_count, "Before increment");
+    product_count++;
+    console.log("Product Count is: ",product_count);
+  }
+  //console.log(product_count); Not allowed outsie the block.
+  /*
+  3.---- const – used for variables whose values should not change.
+  ---- the variables which are declared using const cannot be accessed outside the block
+       And cannot be re-assigned within or outside the block.
+  */
+  {
+    const name = "Amith";
+    console.log("With in the block: ",name);
+    // name = "Amith"; not allowed to re-assign for cons.
+    //console.log(name);
+  }
+  //name = "Amith";
+  //console.log(name);
+  /*
+
+  Conclusion
+  In JavaScript, there are three main ways to declare a variable:
+    1). let – used to declare a variable that can be reassigned.
+    2). const – used for variables whose values should not change.
+    3). var – an older way of declaring variables; it’s best avoided in modern JavaScript due to potential scope issues.
+
+*/
+
+</pre>
+  <!--  ~ Object is which occupy memory
+        ~ variables are objects in javaScript
+        ~ variables allows us to store the data in memory
+           and used to store data dynamically.-->
+
+
+<script>
+  items = 0;
+  console.log(items, typeof items);
+
+  /* 1. In Js as a programmer we don't need to declare data types for variables.
+     2. Js itself will assign the data type for variables based on the value which we have stored in it.
+  */
+
+  /* In JavaScript, there are three main ways to declare a variable:
+    1.---- var – an older way of declaring variables; it’s best avoided in modern JavaScript due to potential scope issues
+          ---- The variable which are declared using var can be accessed inside the same block and outside the block as well.
+   */
+  {
+    var product = 20;
+    console.log(product);
+  }
+  product = 400;
+  console.log(product);
+
+  /*
+    2.---- let – used to declare a variable that can be reassigned.
+      ---- the variables declared using let can be accessed and can be re-assigned with in the same block.
+   */
+  {
+    let product_count = 300;
+    console.log("Product count is ",product_count, "Before increment");
+    product_count++;
+    console.log("Product Count is: ",product_count);
+  }
+  //console.log(product_count); Not allowed outsie the block.
+  /*
+  3.---- const – used for variables whose values should not change.
+  ---- the variables which are declared using const cannot be accessed outside the block
+       And cannot be re-assigned within or outside the block.
+  */
+  {
+    const name = "Amith";
+    console.log("With in the block: ",name);
+    // name = "Amith"; not allowed to re-assign for cons.
+    //console.log(name);
+  }
+  //name = "Amith";
+  //console.log(name);
+  /*
+
+  Conclusion
+  In JavaScript, there are three main ways to declare a variable:
+    1). let – used to declare a variable that can be reassigned.
+    2). const – used for variables whose values should not change.
+    3). var – an older way of declaring variables; it’s best avoided in modern JavaScript due to potential scope issues.
+
+*/
+
+</script>
+</body>
+</html>
