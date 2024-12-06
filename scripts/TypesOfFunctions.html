@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--WAP to return addition of two numbers? -->
+<div>
+    <h1>Type of Function</h1>
+    <p>1. Function without Parameters and return type</p>
+    <pre>
+        <h1>// Function without Parameters and return type
+            function add() {
+                var a = 10;
+                var b = 20;
+                var c = a + b;
+                console.log("Addition: " , c);
+            }
+            // calling of add():
+            add();//30
+
+
+            // Function With Parameters and without Return
+            function sub(a,b) {
+                console.log("Substraction: ", a - b);
+            }
+            // Calling of Sub(1,2): With parameters
+            sub(1,2); // -1
+            sub('kodnest', 'tech'); // NaN
+            sub(); //NaN
+
+
+            // Function Without Parmeters and With return Statement
+            function mul() {
+                var a = 10;
+                var b = 20;
+                return a * b;
+            }
+            // Calling mul
+            console.log("Multiplication: ", mul()); // Multipliaction: 200
+            console.log("Multiplication: ",mul("kodnest", "tech")); // Multiplication: NaN
+
+            // Function with Parameters and with return Type.
+            function div(a,b) {
+                return a / b;
+            }
+            // Calling of div()
+            console.log("Division: ", div("kodnest", "tech")); // Division: NaN
+            console.log("Division: ",div(100, 10)); // Division : 10
+        </h1>
+    </pre>
+</div>
+
+<script>
+    // Function without Parameters and return type
+    function add() {
+        var a = 10;
+        var b = 20;
+        var c = a + b;
+        console.log("Addition: " , c);
+    }
+    // calling of add():
+    add();//30
+
+
+    // Function With Parameters and without Return
+    function sub(a,b) {
+        console.log("Substraction: ", a - b);
+    }
+    // Calling of Sub(1,2): With parameters
+    sub(1,2); // -1
+    sub('kodnest', 'tech'); // NaN
+    sub(); //NaN
+
+
+    // Function Without Parmeters and With return Statement
+    function mul() {
+        var a = 10;
+        var b = 20;
+        return a * b;
+    }
+    // Calling mul
+    console.log("Multiplication: ", mul()); // Multipliaction: 200
+    console.log("Multiplication: ",mul("kodnest", "tech")); // Multiplication: NaN
+
+    // Function with Parameters and with return Type.
+    function div(a,b) {
+        return a / b;
+    }
+    // Calling of div()
+    console.log("Division: ", div("kodnest", "tech")); // Division: NaN
+    console.log("Division: ",div(100, 10)); // Division : 10
+
+</script>
+</body>
+</html>

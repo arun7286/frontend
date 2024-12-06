@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>waysOfFunctionDeclaration</title>
+</head>
+<body>
+<marquee><h1>Inspect and Check console for output</h1></marquee>
+<!--
+ 1. Function Declaration: These functions are Hoisted.
+ 2. Function Expression: These Functions are not Not Hoisted.
+ 3. Arrow Function: Small Anonymous Function used for Callbacks -->
+<pre>
+  <h1>
+    // Function Declaration;
+  function add1(a, b) {
+    return a + b;
+  }
+  console.log("Addition From Function Declaration: ", add1(10, 20));
+  // -------------------------------------------------------------------------------------
+  // Function Expression:
+  let add2 = function(a,b) {
+    return a + b;
+  }
+  console.log("Addition From Function Expression: ", add2(10, 20));
+  // -------------------------------------------------------------------------------------
+  function mul(a,b) {
+    return a * b;
+  }
+  console.log("Multiplication From Function declaration: ", mul(10, 20));
+  // -------------------------------------------------------------------------------------
+  let mul2 = function(a,b) {
+    return a * b;
+  }
+  console.log("Multiplication From Function Expression: ", mul2(10, 20));
+  // -------------------------------------------------------------------------------------
+  // Arrow Function
+  let ar = (a,b) => {
+    console.log("Division From Arrow Function: ", a/b);
+  }
+  //calling
+  ar(10, 20);
+
+  // WAP to Print Greeting Message to User
+  function greet1(name) {
+    console.log("Hello! ", name);
+  }
+  greet1("John");
+
+  let greet2 = function(name){
+    console.log("Hi! ", name);
+  }
+  greet2("Amith");
+
+  let greet3 = (name) => console.log("Hey! ", name);
+  greet3("John");
+  </h1>
+</pre>
+<script>
+  // Function Declaration;
+  function add1(a, b) {
+    return a + b;
+  }
+  console.log("Addition From Function Declaration: ", add1(10, 20));
+  // -------------------------------------------------------------------------------------
+  // Function Expression:
+  let add2 = function(a,b) {
+    return a + b;
+  }
+  console.log("Addition From Function Expression: ", add2(10, 20));
+  // -------------------------------------------------------------------------------------
+  function mul(a,b) {
+    return a * b;
+  }
+  console.log("Multiplication From Function declaration: ", mul(10, 20));
+  // -------------------------------------------------------------------------------------
+  let mul2 = function(a,b) {
+    return a * b;
+  }
+  console.log("Multiplication From Function Expression: ", mul2(10, 20));
+  // -------------------------------------------------------------------------------------
+  // Arrow Function
+  let ar = (a,b) => {
+    console.log("Division From Arrow Function: ", a/b);
+  }
+  //calling
+  ar(10, 20);
+
+  // WAP to Print Greeting Message to User
+  function greet1(name) {
+    console.log("Hello! ", name);
+  }
+  greet1("John");
+
+  let greet2 = function(name){
+    console.log("Hi! ", name);
+  }
+  greet2("Amith");
+
+  let greet3 = (name) => console.log("Hey! ", name);
+  greet3("John");
+</script>
+
+</body>
+</html>
