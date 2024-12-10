@@ -1,15 +1,31 @@
 <script>
-    // Array: Object
-    let arr = [10,20,30,40,50,60,70,80,90,100];
-    console.log(arr);
-
-    // Key : Value Pair() : Object
-
-    let student = {
-        name: 'Amith',
-        age: 25,
-        department: 'Computer Science',
-        email: 'amith@gmail.com'
+    let s1 = {
+        name: 'Akash',
+        age: 34,
+        eat: function() {
+            console.log("Akash is eating");
+        },
+        work: function() {
+            console.log("Akash is working");
+        }
     }
-    console.log(student);
+    console.log(s1);//{name: 'Akash', age: 34, eat: ƒ, work: ƒ}
+    console.log(s1.name, s1.age); // Akash 34
+    console.log(s1.eat()); // Akash is eating.
+    console.log(s1.work()); // Akash is working.
+    // JSON Object
+    let emp = {
+        id: 102,
+        name: 'Prakash',
+        age: 35,
+        salary: 34000,
+        work: () => "Prakash is working",
+        eat: () => "Prakash is eating"
+    }
+    console.log(emp.id); //102
+    console.log(emp.name); // Prakash
+    console.log(emp.age); // 35
+    console.log(emp.salary); // 34000
+    console.log(emp.work()); //Prakash is working
+    console.log(emp.eat()); // Prakash is eating
 </script>
