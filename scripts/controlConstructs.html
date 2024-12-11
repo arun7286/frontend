@@ -1,0 +1,116 @@
+<head>
+  <title>Control Constructs</title>
+  <style>
+    body {
+      font-family : monospace;
+      font-weight : bold;
+      font-style : italic;
+      font-size : xx-large;
+      align-items: center;
+    }
+    pre {
+      background-color: black;
+      color: white;
+      padding: 100px;
+      border-radius: 10px;
+      width: 50vw;
+
+    }
+
+    </style>
+</head>
+<body>
+<pre>
+    let number = 23;
+  if (number > 18) {
+    console.log(`${number} is Greater than 18`)
+  }
+  else {
+    console.log(`${number} is Greater than 18`)
+  }
+</pre>
+<pre>
+  let day = "Tuesday";
+
+  switch (day) {
+    case "Monday":
+      console.log("Monday");
+      break;
+    case "Tuesday":
+      console.log("Tuesday");
+      break;
+    case "Wednesday":
+      console.log("Wednesday");
+      break;
+    case "Thursday":
+      console.log("Thursday");
+      break;
+    case "Friday":
+      console.log("Friday");
+      break;
+    case "Saturday":
+      console.log("Saturday");
+      break;
+  }
+</pre>
+<pre>
+  // for of loop
+
+  arr = [1, 2, 3, 4, 5];
+  console.log(arr); //[1, 2, 3, 4, 5]
+  for(let i of arr) {
+    console.log(i);
+  }
+</pre>
+<pre>
+  // forEach
+  arr.forEach(function(ele, indx){
+    console.log(`Element Value is: ${ele} and its Index Value is: ${indx}`);
+  });
+</pre>
+<script>
+  let number = 23;
+  if (number > 18) {
+    console.log(`${number} is Greater than 18`)
+  }
+  else {
+    console.log(`${number} is Greater than 18`)
+  }
+
+  let day = "Tuesday";
+
+  switch (day) {
+    case "Monday":
+      console.log("Monday");
+      break;
+    case "Tuesday":
+      console.log("Tuesday");
+      break;
+    case "Wednesday":
+      console.log("Wednesday");
+      break;
+    case "Thursday":
+      console.log("Thursday");
+      break;
+    case "Friday":
+      console.log("Friday");
+      break;
+    case "Saturday":
+      console.log("Saturday");
+      break;
+  }
+
+  // for of loop
+
+  arr = [1, 2, 3, 4, 5];
+  console.log(arr); //[1, 2, 3, 4, 5]
+  for(let i of arr) {
+    console.log(i);
+  }
+
+  // forEach
+  arr.forEach(function(ele, indx){
+    console.log(`Element Value is: ${ele} and its Index Value is: ${indx}`);
+  });
+</script>
+</body>

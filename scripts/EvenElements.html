@@ -1,0 +1,50 @@
+<body style="background-color:black;color: white;">
+<pre style="font-family: monospace;font-size: xx-large;font-weight: ">
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    even = arr.filter(x => x % 2 === 0); // filter is High Order
+    console.log("Even numbers: ",even); // Even numbers: [2, 4, 6, , 10, 12, 14]
+
+    multiplesOfThree = arr.filter(x => x % 3 === 0);
+    console.log("multiples Of Three: ",multiplesOfThree); //multiples Of Three: [3, 6, 9, 12, 15]
+
+
+    sq = arr.map(elem => elem * 2); // Call Back function
+    console.log("Squares: ",sq); //Squares: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+    sq = arr.map(elem => elem * 2);
+    console.log(sq); //[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+    prod = arr.reduce(function(arr, ele) {
+        return arr * ele;
+    });
+    console.log(prod); // 1307674368000
+
+    pro = arr.reduce((arr, ele) => arr * ele);
+    console.log(pro); // 1307674368000
+
+</pre>
+
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    even = arr.filter(x => x % 2 === 0); // filter is High Order
+    console.log("Even numbers: ",even); // Even numbers: [2, 4, 6, , 10, 12, 14]
+
+    multiplesOfThree = arr.filter(x => x % 3 === 0);
+    console.log("multiples Of Three: ",multiplesOfThree); //multiples Of Three: [3, 6, 9, 12, 15]
+
+
+    sq = arr.map(elem => elem * 2); // Call Back function
+    console.log("Squares: ",sq); //Squares: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+    sq = arr.map(elem => elem * 2);
+    console.log(sq); //[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
+
+    prod = arr.reduce(function(arr, ele) {
+        return arr * ele;
+    });
+    console.log(prod); // 1307674368000
+
+    pro = arr.reduce((arr, ele) => arr * ele);
+    console.log(pro); // 1307674368000
+</script>
+</body>
