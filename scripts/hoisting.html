@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <h1>Hoisting in java Script</h1>
+    <p>Inspect and check console for output</p>
+</div>
+<div class="content-container">
+    <pre>
+        1. Global Execution Record.
+            a. Memory Allocation Phase
+            b. Code Execution Phase
+    var a = 100;
+    console.log(b);
+    var b = 300;
+    //console.log(c);
+        // uncaught: refactor error :
+                    Cannot be access 'c' before initialization.
+        program will be terminated here
+    console.log(d);
+    var d = 600;
+    console.log(d);
+
+    Variable can be accessed before its declaration using "VAR"
+    </pre>
+    <pre>
+    console.log("E = ", e);
+    //let e = 100;
+
+    //console.log("F = ", f);
+    //let f = 300;
+
+    //console.log("G = ", g);
+    //let g = 100;
+    </pre>
+    <p>Variables which are declared using LET will be stord in side Temporal Dead Zone.</p>
+    <p>The TDZ is the area of memory where uninitialized variables will be stored.</p>
+    <p>If programmer will access the variable which are inside TDZ. will get reference Err.</p>
+    <p>The variable which are declared using LET cannot be accessed before its declaration.</p>
+</div>
+<script>
+    var a = 100;
+    console.log(b); // undefined
+    var b = 300;
+    //console.log(c);
+    console.log(d); // undefined
+    var d = 600;
+    console.log(d); // 600
+    //  Variables can be accessed before its declaration using VAR
+    /*
+    console.log("E = ", e);
+    let e = 100;
+
+    console.log("F = ", f);
+    let f = 300;
+
+    console.log("G = ", g);
+    let g = 100;
+
+    1. Variables which are declared using LET will be stord in side Temporal Dead Zone(TDZ).
+    2. The TDZ is the area of memory where uninitialized variables will be stored.
+    3. If programmer will access the variable which are inside TDZ. will get reference Err.
+    4. The variable which are declared using LET cannot be accessed before its declaration.
+    */
+</script>
+</body>
+</html>

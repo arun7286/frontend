@@ -1,0 +1,63 @@
+body {
+    font-family:monospace;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: bold;
+    align-items: center;
+}
+pre {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding : 15px;
+    margin : 50px 200px;
+}
+
+output {
+    color: rgba(200, 161, 66, 0.94);
+    animation-name: output;
+    animation-duration: 60s;
+}
+pre:nth-child(even) {
+    color:black;
+    background-color: rgba(200, 161, 66, 0.94);
+    border-radius: 10px;
+}
+pre:nth-child(even) > output {
+    color: black;
+    font-weight: bold;
+    animation-name: output;
+}
+
+pre:nth-child(even) > output {
+    animation-duration: 60s;
+}
+
+.content-container {
+    animation-name : show-content;
+    animation-duration: 1200ms;
+}
+#container,p{
+    text-align: center;
+}
+#quote {
+    text-align: center;
+    border-radius: 10px;
+}
+
+@keyframes show-content {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes output{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }

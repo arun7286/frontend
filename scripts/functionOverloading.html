@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--It is the process of creating multiple functions
+with the same name and with Different Number of
+Parameters.-->
+<script>
+  add(3,99); // 10(Because last declared function is executed/considered)
+  function add(a, b) {
+    console.log(a+b);
+  }
+  function add() {
+    console.log(3+7);
+  }
+  add(); //10(Because last declared function is executed/considered)
+  add(2,8); //10(Because last declared function is executed/considered)
+  // Java Script doesn't support function Overloading.
+  /* In ja when we create multiple methods with same
+     name then only last declared function will be considered and
+     all the previous function implementation will be useless */
+</script>
+</body>
+</html>

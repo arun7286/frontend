@@ -1,46 +1,59 @@
+<head>
+    <title>Operators</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css">
+</head>
 <body>
+<pre>
+    console.log(5 + 3); <output>// addition</output>
+    console.log(5 - 2); <output>// Substraction</output>
+    console.log(5 * 3); <output>// multiplication</output>
+    console.log(5 ** 3); <output>// exponent</output>
+    console.log(5 / 4);
+</pre>
+<pre>
+    // == (Loosely not Equality Operator)
+    console.log(10 == '10'); <output>// true [Value + ignores datatype]</output>
+    console.log(10 != '10'); <output>// false</output>
+</pre>
+<pre id="quote">Code Never Lies..
+    Comments Sometimes Do...</pre>
+<pre>
+    // === (Strctly equal Operator)
+    console.log(10 === '10'); <output>// false: Value + datatype.</output>
+    console.log(10 !== '10'); <output>//true</output>
+</pre>
+<pre>
+    // Logical Operators.
+    console.log(!true); <output>// false</output>
+    console.log(10 || false); <output>// 10</output>
+    console.log(10 && false); <output>// false</output>
+</pre>
+<pre>
+    // Ternary Operator
+    // result = (Condition) ? Expression1 : Expression2;
 
-<pre> <h1>console.log(5 + 3); // addition
-console.log(5 - 2); // Substraction
-console.log(5 * 3); // multiplication
-console.log(5 ** 3); // exponent
-console.log(5 / 4);
+    result = (18 > 10) ? 'Expression 1 is true' : 'Expression 1 is false';
+    console.log(result); <output>// Expression 1 is true</output>
+</pre>
+<pre>
+    //typeOf() operator Returns Datatype of an Object
+    var a = 100;
+    console.log(a, typeof a); <output>// (100, number)</output>
+</pre>
+<pre>
+    a = 100.45;
+    console.log(a, typeof a); <output>// (100.45, number)</output>
+</pre>
+<pre>
+    a = 'Kodnest';
+    console.log(a, typeof a);<output>//(Kodnest, string)</output>
+</pre>
+<pre>
+    a = 'k';
+    console.log(a, typeof a); <output>//(Kodnest, String)</output>
 
-// == (Loosely not Equality Operator)
-console.log(10 == '10'); // true: Value + ignores datatype
-console.log(10 != '10'); // false
-
-// === (Strctly equal Operator)
-console.log(10 === '10'); // false: Value + datatype.
-console.log(10 !== '10'); //true
-
-console.log(!true); // false
-// Logical Operators.
-console.log(10 || false); // 10
-console.log(10 && false); // false
-
-// Ternary Operator
-// result = (Condition) ? Expression1 : Expression2;
-
-result = (18 > 10) ? 'Expression 1 is true' : 'Expression 1 is false';
-console.log(result);
-
-//typeOf() operator Returns Datatype of an Object
-var a = 100;
-console.log(a, typeof a); // (100, number)
-
-a = 100.45;
-console.log(a, typeof a); // (100.45, number)
-
-a = 'Kodnest';
-console.log(a, typeof a);//(Kodnest, string)
-
-a = 'k';
-console.log(a, typeof a); //(Kodnest, String)
-
-a = true;
-console.log(a, typeof a); //(true, boolean)
-</h1>
+    a = true;
+    console.log(a, typeof a); <output>//(true, boolean)</output>
 </pre>
 <script>
 console.log(5 + 3); // addition

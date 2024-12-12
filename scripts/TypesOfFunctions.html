@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
 </head>
 <body>
+<div id="container">
+<h1>Types of Functions</h1>
+<p>Inspect and check console for output.</p>
+</div>
+<div class="content-container">
 <!--WAP to return addition of two numbers? -->
-<div>
-    <h1>Type of Function</h1>
-    <p>1. Function without Parameters and return type</p>
     <pre>
-        <h1>// Function without Parameters and return type
+        // Function without Parameters and return type
             function add() {
                 var a = 10;
                 var b = 20;
@@ -18,19 +21,20 @@
                 console.log("Addition: " , c);
             }
             // calling of add():
-            add();//30
-
-
+            add();
+            <output>//30</output>
+    </pre>
+<pre>
             // Function With Parameters and without Return
             function sub(a,b) {
                 console.log("Substraction: ", a - b);
             }
             // Calling of Sub(1,2): With parameters
-            sub(1,2); // -1
-            sub('kodnest', 'tech'); // NaN
-            sub(); //NaN
-
-
+            sub(1,2); <output>// -1</output>
+            sub('kodnest', 'tech'); <output>// NaN</output>
+            sub(); <output>//NaN</output>
+</pre>
+<pre>
             // Function Without Parmeters and With return Statement
             function mul() {
                 var a = 10;
@@ -38,20 +42,23 @@
                 return a * b;
             }
             // Calling mul
-            console.log("Multiplication: ", mul()); // Multipliaction: 200
-            console.log("Multiplication: ",mul("kodnest", "tech")); // Multiplication: NaN
-
+            console.log("Multiplication: ", mul());
+                    <output>// Multipliaction: 200</output>
+            console.log("Multiplication: ",mul("kodnest", "tech"));
+                    <output>// Multiplication: NaN</output>
+</pre>
+<pre>
             // Function with Parameters and with return Type.
             function div(a,b) {
                 return a / b;
             }
             // Calling of div()
-            console.log("Division: ", div("kodnest", "tech")); // Division: NaN
-            console.log("Division: ",div(100, 10)); // Division : 10
-        </h1>
+            console.log("Division: ", div("kodnest", "tech"));
+                    <output>// Division: NaN</output>
+            console.log("Division: ",div(100, 10));
+                    <output>// Division : 10</output>
     </pre>
 </div>
-
 <script>
     // Function without Parameters and return type
     function add() {

@@ -1,23 +1,6 @@
 <head>
   <title>Control Constructs</title>
-  <style>
-    body {
-      font-family : monospace;
-      font-weight : bold;
-      font-style : italic;
-      font-size : xx-large;
-      align-items: center;
-    }
-    pre {
-      background-color: black;
-      color: white;
-      padding: 100px;
-      border-radius: 10px;
-      width: 50vw;
-
-    }
-
-    </style>
+  <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
 </head>
 <body>
 <pre>
@@ -53,11 +36,14 @@
       break;
   }
 </pre>
+<pre id="quote">Code Never Lies..
+    Comments Sometimes Do...</pre>
+
 <pre>
   // for of loop
 
   arr = [1, 2, 3, 4, 5];
-  console.log(arr); //[1, 2, 3, 4, 5]
+  console.log(arr); <output>//[1, 2, 3, 4, 5]</output>
   for(let i of arr) {
     console.log(i);
   }

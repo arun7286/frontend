@@ -1,3 +1,47 @@
+<head xmlns="http://www.w3.org/1999/html">
+    <title>ArrayMethods</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <h1>Array Methods</h1>
+    <p>Inspect and check console for output.</p>
+</div>
+<div class="content-container">
+<pre id="quote">Code Never Lies..
+    Comments Sometimes Do...</pre>
+<pre>
+    let arr = [10, 20, 30, 40];
+    console.log(arr); <output>//[10, 20, 30, 40,]</output>
+    console.log(Array.isArray(arr)); <output>//true</output>
+</pre>
+<pre>
+    arr.push(50);
+    console.log(arr); <output>// [10, 20, 30, 40, 50]</output>
+</pre>
+<pre>
+    arr.pop(); <output>// removes last element</output>
+    console.log(arr); <output>//[10, 20, 30, 40]</output>
+</pre>
+<pre>
+    arr.shift(); <output>// removes first element</output>
+    console.log(arr); <output>//[20, 30, 40]</output>
+</pre>
+<pre>
+    arr.unshift(22); <output>// adds element at first(0th index)</output>
+    console.log(arr); <output>//[20, 30, 40]</output>
+</pre>
+<pre>
+    let nums = [1, 2, 3, 4, 5];
+    console.log(nums);
+</pre>
+<pre>
+    console.log("Deleted Elements: ",nums.splice(2, 3, 600, 400, 20)); <output>// [3, 4, 5]</output>
+    // splice(start, deleteCount, Element to be added)
+    console.log(nums); <output>//[1, 2, 600, 400, 'Kodnest', 20]</output>
+    console.log(nums.slice(1,3));<output>//[2, 600]</output>
+</pre>
+</div>
 <Script>
   let arr = [10, 20, 30, 40];
   console.log(arr); //[10, 20, 30, 40,]
@@ -25,3 +69,4 @@
   console.log(nums.slice(1,3));//[2, 600]
 
 </Script>
+</body>

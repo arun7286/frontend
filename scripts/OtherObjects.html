@@ -1,3 +1,42 @@
+<head>
+    <title>Other Objects</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<pre>
+
+        let s1 = {
+        name: 'Akash',
+        age: 34,
+        eat: function() {
+            console.log("Akash is eating");
+        },
+        work: function() {
+            console.log("Akash is working");
+        }
+    }
+    console.log(s1);<output>//{name: 'Akash', age: 34, eat: ƒ, work: ƒ}</output>
+    console.log(s1.name, s1.age); <output>// Akash 34</output>
+    console.log(s1.eat()); <output>// Akash is eating.</output>
+    console.log(s1.work()); <output>// Akash is working.</output>
+</pre>
+<pre>
+    // JSON Object
+    let emp = {
+        id: 102,
+        name: 'Prakash',
+        age: 35,
+        salary: 34000,
+        work: () => "Prakash is working",
+        eat: () => "Prakash is eating"
+    }
+    console.log(emp.id); <output>//102</output>
+    console.log(emp.name); <output>// Prakash</output>
+    console.log(emp.age); <output>// 35</output>
+    console.log(emp.salary); <output>// 34000</output>
+    console.log(emp.work()); <output>//Prakash is working</output>
+    console.log(emp.eat()); <output>// Prakash is eating</output>
+</pre>
 <script>
     let s1 = {
         name: 'Akash',
@@ -29,3 +68,4 @@
     console.log(emp.work()); //Prakash is working
     console.log(emp.eat()); // Prakash is eating
 </script>
+</body>
