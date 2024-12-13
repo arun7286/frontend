@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href = "/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <h1>Spread Operator</h1>
+    <p>Inspect and check console for output.</p>
+</div>
+<!--spread Operator (...)-->
+<div class="content-container">
+    <pre>
+    function add(...args){ // Allowed
+    if(args.length === 0){
+    console.log('No Arguments...!');
+    }
+    else {
+    let sum = args.reduce((acc,ele) => acc + ele,0);//Not Allowed
+    console.log('Sum of Arguments is',sum);
+    }
+    }
+    add(10,20,30,40); <output>Sum of Arguments is 100</output>
+    </pre>
+    <pre>
+    let sub = (...args)=>{ // Allowed
+    if(arguments.length === 0){
+    console.log('No Arguments');
+    }
+    else {
+    let sum = arguments.reduce((acc,ele)=> acc+ ele,0);
+    console.log('Sum is: ',sum);
+    }
+    }
+    sub(); <output>No Arguments</output>
+    </pre>
+</div>
+<script>
+    function add(...args){ // Allowed
+        if(args.length === 0){
+            console.log('No Arguments...!');
+        }
+        else {
+            let sum = args.reduce((acc,ele) => acc + ele,0);//Not Allowed
+            console.log('Sum of Arguments is',sum);
+        }
+    }
+    add(10,20,30,40);
+    let sub = (...args)=>{ // Allowed
+        if(arguments.length === 0){
+            console.log('No Arguments');
+        }
+        else {
+            let sum = arguments.reduce((acc,ele)=> acc+ ele,0);
+            console.log('Sum is: ',sum);
+        }
+    }
+    sub();
+
+</script>
+</body>
+</html>

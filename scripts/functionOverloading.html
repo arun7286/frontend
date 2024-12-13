@@ -9,19 +9,72 @@
 with the same name and with Different Number of
 Parameters.-->
 <script>
-  add(3,99); // 10(Because last declared function is executed/considered)
-  function add(a, b) {
+  add1(3,99); // 10(Because last declared function is executed/considered)
+  function add1(a, b) {
     console.log(a+b);
   }
-  function add() {
+  function add1() {
     console.log(3+7);
   }
-  add(); //10(Because last declared function is executed/considered)
-  add(2,8); //10(Because last declared function is executed/considered)
+  add1(); //10(Because last declared function is executed/considered)
+  add1(2,8); //10(Because last declared function is executed/considered)
+
+
   // Java Script doesn't support function Overloading.
   /* In ja when we create multiple methods with same
      name then only last declared function will be considered and
      all the previous function implementation will be useless */
+
+    function add() {
+        if(arguments.length === 2) {
+            console.log(arguments[0]+arguments[1]);
+        }
+        else if(arguments.length === 3) {
+            console.log(arguments[0] + arguments[1]+arguments[2]);
+        }
+        else {
+            console.log("Invalid argument");
+        }
+    }
+    add(); // Invalid arguments
+    add(20,30); //50
+    add(100,200,400); //700
+    //this is outdated
+    /*
+      1.Disadvantage of this argument is it won't support all array methods.
+      {Filter, map, reduce}.
+
+      2.
+     */
+    function add2() {
+        if(arguments.length === 0) {
+            console.log("NO arguments");
+        }
+        else {
+            let sum = 0;
+            for(let i=0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            console.log(sum);
+            // let sum = arguments.reduce(acc,ele) => acc + ele,0};
+            console.log("Sum of Arguments is: ", sum);
+            // thi is not allowed.
+        }
+    }
+    add2(); // NO arguments
+    add(10,20,30); //60
+  // let sum = () => {
+  //     if(arguments.length === 0) {
+  //         console.log("NO Arguments");
+  //     }
+  //     else {
+  //         let sum = arguments.reduce((result, item) => result+item,0);
+  //         console.log(result);
+  //     }
+  // }
+
+sum(10,20); //ReferenceError: arguments is not defined.
+
 </script>
 </body>
 </html>
