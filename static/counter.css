@@ -1,0 +1,23 @@
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+button:hover {
+    background-color: #a37070;
+    border-radius: 10px;
+
+}
+#reset {
+    background-color: #a37070;
+    color: white;
+}
+
+body {
+    background-color: #a37070;
+    width: 100vw;
+    height: 100vh;
+}

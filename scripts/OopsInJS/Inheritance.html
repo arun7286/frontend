@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href="/static/scriptCSS.css" type = "text/css">
+</head>
+<body>
+<div id="container">
+    <h1>Inheritance in JAVASCRIPT</h1>
+    <p>Inspect and check console for output.</p>
+</div>
+<div class = "content-container">
+    <pre>
+     class Employee {
+        constructor(name,id) {
+            this.name = name;
+            this.id = id;
+        }
+        work() {
+            console.log(this.name, "isworking")
+        }
+    }
+    class EmployeePersonalInfo extends Employee {
+        constructor(name, id,email,phone) {
+            super(name, id);
+            this.email = email;
+            this.phone = phone;
+        }
+        getDetails() {
+            console.log("Employee Name: " + this.name);
+            console.log("Employee ID: " + this.id);
+            console.log("Employee Email: " + this.email);
+            console.log("Employee Phone: " + this.phone);
+        }
+    }
+    let emp1 = new EmployeePersonalInfo("Arun", 25, "arun@gmail.com", 9948181771);
+    emp1.getDetails();
+        <output>
+            Employee Name: Arun
+            Employee ID: 25
+            Employee Email: arun@gmail.com
+            Employee Phone: 9948181771
+        </output>
+
+    let emp2 = new EmployeePersonalInfo("Neha", 26, "neha@gmail.com", 9948181449);
+    emp2.getDetails();
+    </pre>
+
+    <pre>
+    class Vehicle {
+        constructor() {
+            this.type = "Generic Vehicle";
+        }
+
+        describe() {
+            console.log(`This is a ${this.type}`);
+        }
+    }
+    class Car extends Vehicle {
+        constructor(brand) {
+            super();
+            this.brand = brand;
+        }
+        describe() {
+            super.describe();
+            console.log(`This is a ${this.brand} car.`);
+        }
+    }
+    console.log("_----____----____----____----____----____----_");
+    const genericVehicle = new Vehicle();
+    genericVehicle.describe();
+    console.log("_----____----____----____----____----____----_");
+    const myCar = new Car("Tesla");
+    myCar.describe();
+    </pre>
+</div>
+<script>
+    class Employee {
+        constructor(name,id) {
+            this.name = name;
+            this.id = id;
+        }
+        work() {
+            console.log(this.name, "isworking")
+        }
+    }
+    class EmployeePersonalInfo extends Employee {
+        constructor(name, id,email,phone) {
+            super(name, id);
+            this.email = email;
+            this.phone = phone;
+        }
+        getDetails() {
+            console.log("Employee Name: " + this.name);
+            console.log("Employee ID: " + this.id);
+            console.log("Employee Email: " + this.email);
+            console.log("Employee Phone: " + this.phone);
+        }
+    }
+    let emp1 = new EmployeePersonalInfo("Arun", 25, "arun@gmail.com", 9948181771);
+    emp1.getDetails();
+    console.log("_----____----____----____----____----____----_");
+    let emp2 = new EmployeePersonalInfo("Neha", 26, "neha@gmail.com", 9948181449);
+    emp2.getDetails();
+
+    class Vehicle {
+        constructor() {
+            this.type = "Generic Vehicle";
+        }
+
+        describe() {
+            console.log(`This is a ${this.type}`);
+        }
+    }
+
+    class Car extends Vehicle {
+        constructor(brand) {
+            super();
+            this.brand = brand;
+        }
+
+        describe() {
+            super.describe();
+            console.log(`This is a ${this.brand} car.`);
+        }
+    }
+    console.log("_----____----____----____----____----____----_");
+    const genericVehicle = new Vehicle();
+    genericVehicle.describe();
+    console.log("_----____----____----____----____----____----_");
+    const myCar = new Car("Tesla");
+    myCar.describe();
+</script>
+</body>
+</html>

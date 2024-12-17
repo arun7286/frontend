@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListner()</title>
+    <link rel = "stylesheet" type = 'text/css' href = '/static/scriptCSS.css'>
+</head>
+<body>
+<div id = "container">
+    <h1>Event Listeners In JAVASCRIPT</h1>
+</div>
+<div class="content-container">
+    <pre id ='btn'>
+        const target = document.getElementById('btn');
+        target.addEventListener('click', function() {
+        alert("button Clicked....")
+        })
+        <output>Click Here TO Check</output>
+    </pre>
+    <pre id ='btn2'>
+        const target2 = document.getElementById('btn2');
+        target2.addEventListener('dblclick', function() {
+        alert("button Double Clicked....")
+        })
+        <output>Double Click Here TO Check</output>
+    </pre>
+    <pre id ='btn3'>
+        const target3 = document.getElementById('btn3');
+        target3.addEventListener('mouseover', function() {
+        alert("Mouse Over....")
+        })
+        <output>Bring the cursor to get alert....</output>
+    </pre>
+</div>
+<script>
+    const target = document.getElementById('btn');
+    target.addEventListener('click', function() {
+        alert("button Clicked....")
+    })
+
+    const target2 = document.getElementById('btn2');
+    target2.addEventListener('dblclick', function() {
+        alert("button Double Clicked....")
+    })
+    const target3 = document.getElementById('btn3');
+    target3.addEventListener('mouseover', function() {
+        alert("Mouse Over....")
+    })
+</script>
+
+</body>
+</html>

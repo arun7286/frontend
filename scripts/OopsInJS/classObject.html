@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <h1>OOPs in JAVA SCRIPT</h1>
+    <p>Inspect and check console for output.</p>
+</div>
+<div class = "content-container">
+    <pre>
+     class Student {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        study() {
+            console.log(this.name);
+        }
+    }
+    var student = new Student("Arun", 25);
+    console.log(Student.name);
+    console.log(Student.age);
+    student.study();</pre>
+</div>
+<script>
+    class Student {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        study() {
+            console.log(this.name);
+        }
+    }
+    var student = new Student("Arun", 25);
+    console.log(Student.name);
+    console.log(Student.age);
+    student.study();
+</script>
+</body>
+</html>

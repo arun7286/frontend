@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuerySelectorAll()</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<p class = "para">Paragraph 1</p>
+<p class = "para">Paragraph 2</p>
+<p class = "para">Paragraph 3</p>
+<button onclick= fun()>Click Here!</button>
+<script>
+
+    function fun() {
+        const target = document.querySelectorAll(".para");
+        console.log(target); // Node List
+        console.log("Length Before Updating DOM is:",target.length); // 3
+
+        const newElement = document.createElement('div');
+        newElement.innerHTML = `<pre>"Hello World!";</pre>`;
+        newElement.classList.add("content-container");
+        document.body.appendChild(newElement);
+        console.log("Length After Updating DOM is: ", target.length);
+    }
+</script>
+</body>
+</html>

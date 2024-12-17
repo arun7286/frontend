@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+    <link rel="stylesheet" href="/static/counter.css" type="text/css">
+</head>
+<body>
+<div id="content-container">
+    <pre id = "pre-result">0</pre>
+    <pre id="comment">Comment</pre>
+    <pre id = "result">0</pre>
+</div>
+
+<div>
+<pre id="buttons">
+    <button id="inc1">Add 1</button>
+    <button id="inc2">Add 2</button>
+    <button id="inc3">Add 3</button>
+    <button id="inc4">Add 4</button>
+    <button id="inc5">Add 5</button>
+    <button id="inc6">Add 6</button>
+    <button id="dec1">Sub 1</button>
+    <button id="dec2">Sub 2</button>
+    <button id="dec3">Sub 3</button>
+    <button id="dec4">Sub 4</button>
+    <button id="dec5">Sub 5</button>
+    <button id="dec6">Sub 6</button>
+    <button></button>
+    <button id="reset">Reset</button>
+    <button></button>
+</pre>
+</div>
+<script>
+    let count = 0;
+
+    const ele = document.getElementById('result');
+    const pre = document.getElementById('pre-result');
+    const comnt = document.getElementById('comment');
+    const incr1 = document.getElementById('inc1');
+
+    incr1.addEventListener('click', function() {
+        pre.innerHTML = count;
+        count++;
+        comnt.innerHTML = "Added : 1";
+        ele.innerHTML = count;
+    })
+
+    const decr1 = document.getElementById('dec1');
+    decr1.addEventListener('click', () => {
+        pre.unnerHTML = count;
+        count--;
+        comnt.innerHTML = "Subtracted : 1";
+        ele.innerHTML = count;
+    })
+
+    const reset = document.getElementById('reset');
+    reset.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count=0;
+        ele.innerHTML = count;
+    })
+
+    const incr2 = document.getElementById('inc2');
+    incr2.addEventListener('click', function() {
+        pre.innerHTML = count;
+        count += 2;
+        comnt.innerHTML = "Added : 2";
+        ele.innerHTML = count;
+    })
+
+    const decr2 = document.getElementById('dec2');
+    decr2.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count -= 2;
+        comnt.innerHTML = "Subtracted : 2";
+        ele.innerHTML = count;
+    })
+
+    const incr3 = document.getElementById('inc3');
+    incr3.addEventListener('click', function() {
+        pre.innerHTML = count;
+        count += 3;
+        comnt.innerHTML = "Added : 3";
+        ele.innerHTML = count;
+    })
+
+    const decr3 = document.getElementById('dec3');
+    decr3.addEventListener('click', function() {
+        pre.innerHTML = count;
+        count -= 3;
+        comnt.innerHTML = "Subtracted : 3";
+        ele.innerHTML = count;
+    })
+
+    const incr4 = document.getElementById('inc4');
+    incr4.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count += 4;
+        comnt.innerHTML = "Added : 4";
+        ele.innerHTML = count;
+    })
+
+    const incr5 = document.getElementById('inc5');
+    incr5.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count += 5;
+        comnt.innerHTML = "Added : 5";
+        ele.innerHTML = count;
+    })
+
+    const incr6 = document.getElementById('inc6');
+    incr6.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count += 6;
+        comnt.innerHTML = "Added : 6";
+        ele.innerHTML = count;
+    })
+
+    const decr4 = document.getElementById('dec4');
+    decr4.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count -= 4;
+        comnt.innerHTML = "Subtracted : 4";
+        ele.innerHTML = count;
+    })
+
+    const decr5 = document.getElementById('dec5');
+    decr5.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count -= 5;
+        comnt.innerHTML = "Subtracted : 5";
+        ele.innerHTML = count;
+    })
+
+    const decr6 = document.getElementById('dec6');
+    decr6.addEventListener('click', () => {
+        pre.innerHTML = count;
+        count -= 6;
+        comnt.innerHTML = "Subtracted : 6";
+        ele.innerHTML = count;
+    })
+</script>
+</body>
+</html>

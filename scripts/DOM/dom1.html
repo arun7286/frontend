@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class = "test">Para 1</p>
+<p class = "test">Para 2</p>
+<p class = "test">Para 3</p>
+<button onclick = "test1()"></button>
+<button onclick = "test2()"></button>
+<button onclick = "fun()"></button>
+<script>
+    function test1() {
+        const target = document.getElementsByClassName('test');
+        console.log(target.length);
+        const newEle = document.createElement('p'); //<p></p>
+        newEle.textContent = "Hello World From JS DOM"; // <p>Hello World From JS DOM</p>
+        newEle.classList.add('test'); //<p class="test">Hello World From JS DOM</p>
+        document.body.appendChild(newEle);
+        console.log("length after DOM Updated:", target.length);
+    }
+    function test2() {
+        const newEle1 = document.createElement('div');
+        newEle1.innerHtml = `<p style="color: red;"> Hello World From JS DOM</p>`;
+        newEle1.classList.add('test');
+        document.body.appendChild(newEle1);
+    }
+    function fun(){
+        const target = document.getElementsByClassName('container');
+        console.log("Length Before DOM Update is:",target.length);
+
+        const newEle = document.createElement('div');//<div></div>
+
+        newEle.innerHTML = `<h3 style='color:blue'>Hello</h3>`;
+        //<div><h3 style='color:blue'>Hello</h3></div>
+
+        newEle.classList.add('container');
+        document.body.appendChild(newEle);
+        console.log("Length after DOM Update is:",target.length);
+    }
+
+</script>
+
+</body>
+</html>

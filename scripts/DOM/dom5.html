@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classList.add() and classListList.remove() </title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+    <style>
+        /*.styles {*/
+        /*    background-color: rgba(200, 161, 66, 0.94);*/
+        /*    color: black;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <p id="para">Welcome to DOM Manipulation</p>
+    <button onclick="fun()">Click Here!</button>
+</div>
+<div class="content-container">
+    <pre>
+    const target = document.getElementById('para');
+    let toggle = false;
+    function fun() {
+    if (!toggle) {
+    target.classList.add('styles');
+    toggle = true;
+    }
+    else {
+    target.classList.remove('styles');
+    toggle = false;
+    }
+    }
+    </pre>
+</div>
+<script>
+    const target = document.getElementById('para');
+    let toggle = false;
+    function fun() {
+        if (!toggle) {
+            target.classList.add('styles');
+            toggle = true;
+        }
+        else {
+            target.classList.remove('styles');
+            toggle = false;
+        }
+    }
+</script>
+</body>
+</html>
