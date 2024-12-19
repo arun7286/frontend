@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Call Back Hell</title>
+</head>
+<body>
+<script>
+
+    function placeOrder(item, callback) {
+        setTimeout(() => {
+            console.log("Place Order",item);
+            callback();
+        }, 1000);
+    }
+    function makePayment(amount, callback) {
+        setTimeout(() => {
+            console.log(`Amount Received`, amount);
+            callback();
+        }, 2000);
+    }
+
+    function paymentConfirmation(amount, callback) {
+        setTimeout(() => {
+        console.log("Payment Confirmation");
+        callback();
+        }, 1000);
+    }
+
+    function confirmOrder(item, callback) {
+        setTimeout(() => {
+            console.log(`SuccessFully Placed Order`, item);
+            callback();
+        }, 3000)
+    }
+    console.log("Something went wrong");
+
+    placeOrder('Shirt', () => {
+        makePayment(599, () => {
+            paymentConfirmation(599, () => {
+                confirmOrder('Shirt', () => {
+                })
+            })
+        })
+    })
+</script>
+
+</body>
+</html>

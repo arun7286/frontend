@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exception Handling</title>
+    <link rel="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<pre>
+    function add() {
+        a = 20;
+        b = 10;
+        console.log(a + z);
+    <output>Uncaught ReferenceError: z is not defined</output>
+    <output>Program Will be Terminated Here.</output>
+    }
+    add();
+
+    console.log("Next Task 1");
+    console.log("Next Task 2");</pre>
+<p>In the below Programme we will try to catch the Error</p>
+<pre>
+    function add() {
+        a = 20;
+        b = 10;
+        console.log(a + z);
+    }
+    try{
+        add();
+    }
+    catch(e) {
+        console.log("Some Error Occurred);
+    <output>Some Error Occurred</output>
+    }
+    console.log("Next Task 1");
+    <output>Next Task 1</output>
+    console.log("Next Task 2");
+    <output>Next Task 2</output>
+    <output> </output>
+</pre>
+<script>
+    function add() {
+        a = 20;
+        b = 10;
+        console.log(a + z);
+    }
+    try{
+        add();
+    }
+    catch(e) {
+        console.log("Some Error Occurred");
+    }
+    console.log("Next Task 1");
+    console.log("Next Task 2");
+
+</script>
+
+</body>
+</html>
