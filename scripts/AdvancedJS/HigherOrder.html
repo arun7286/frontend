@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Higher order function</title>
+</head>
+<body>
+<!--Higher order functions are such functions
+    which takes another function as arguments-->
+<script>
+
+    //Way 1 of Passing callbacks to Higher Order....
+    function greet(name) {
+        console.log("Hello " + name);
+    }
+    function processGreeting(callback, name) {
+        callback(name);
+    }
+    processGreeting(greet, "Akash"); // Hello Akash
+    //Way 2 of Passing callback to Higher Order......
+
+    function process(callback, name) {
+        callback(name);
+    }
+    process((name) => console.log("Hello " + name),"Ankith"); // Hello Ankith
+
+    // Way 3
+
+    function Addition(callback,a,b) {
+        callback(a,b);
+    }
+    Addition(function add(a,b) {
+        console.log("Addition:", a+b)},20,50); // Addition: 70
+
+    //Built-in Higher Order Functions:
+    //filter, map And reduce takes another function as argument
+    // --filter(() => {})
+    //--map(() => {})
+    //--reduce((acc,ele) => {})
+</script>
+
+</body>
+</html>

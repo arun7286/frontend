@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closures In JavaScript</title>
+</head>
+<body>
+
+<script>
+  function outer() {
+    let count = 0;
+    return {
+      increment: function () {
+        console.log(++count);
+      },
+      decrement: function () {
+        console.log(--count);
+      },
+      reset: function () {
+        console.log(count = 0);
+      }
+    }
+  }
+  let result = outer();
+  result.increment();
+  result.increment();
+  result.increment();
+  result.decrement();
+  result.reset();
+</script>
+
+</body>
+</html>
