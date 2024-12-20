@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <style>
+        #msg {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label>Name:
+        <input type="text" id = "name">
+    </label>
+    <br>
+    <span id = "msg">*</span>
+    <button onsubmit= "return validate()">Submit</button>
+</form>
+<script src = "validate.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise Chaining</title>
+    <link rel ="stylesheet" href="/static/scriptCSS.css" type="text/css">
+</head>
+<body>
+<h>Promises Chaining</h>
+
+<pre>
+    function placeOrder(item) {
+        return new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                console.log("Order request for: ", item);
+                resolve();
+            },4000)
+        })
+    }
+
+    function makePayment(amt) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Payment Received of Amount: ", amt);
+                resolve();
+            })
+        })
+    }
+
+    function confirmOrder() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Order Confirmed");
+                resolve();
+            },4000);
+        })
+    }
+
+    function sentEmail() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Email Sent");
+                resolve();
+            },3000);
+        })
+    }
+
+    placeOrder('Shirts')
+    .then(() => makePayment(2400))
+    .then(() => confirmOrder())
+    .then(() => sentEmail())
+    .then(() => console.log("Process Ended...!"))
+    .catch((msg) => console.log(msg));
+</pre>
+
+
+<script>
+    function placeOrder(item) {
+        return new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                console.log("Order request for: ", item);
+                resolve();
+            },4000)
+        })
+    }
+
+    function makePayment(amt) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Payment Received of Amount: ", amt);
+                resolve();
+            })
+        })
+    }
+
+    function confirmOrder() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Order Confirmed");
+                resolve();
+            },4000);
+        })
+    }
+
+    function sentEmail() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Email Sent");
+                resolve();
+            },3000);
+        })
+    }
+
+    // placeOrder('Shirts')
+    // .then(() => makePayment(489))
+    // .then(() => confirmOrder())
+    // .then(() => sentEmail())
+    // .then(() => console.log("Process Ended...(~.~)"))
+    // .catch((msg) => console.log(msg));
+    //
+    // console.log("Independent Task.....(~.~)")
+    async function processOrder() {
+        await placeOrder('Shirts');
+        await makePayment(249);
+        await confirmOrder();
+        await sentEmail();
+        console.log("Process Ended...!");
+    }
+    processOrder();
+</script>
+</body>
+</html>
