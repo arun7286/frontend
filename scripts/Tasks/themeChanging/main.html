@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Changing</title>
+    <link rel =" stylesheet" type = "text/css" href = "styles.css">
+</head>
+<body id = "body">
+<header>
+        <button id = "mode"></button>
+</header>
+<div id="container">
+    <pre>
+        // Select the elements
+        const themeContainer = document.getElementById('themeContainer');
+        const heading = document.getElementById('heading');
+        const themeToggleButton = document.getElementById('themeToggleButton');
+
+        // Add event listener for theme toggle
+        themeToggleButton.addEventListener('click', () => {
+            if (themeContainer.style.backgroundColor === 'black') {
+                // Switch to Light Theme
+                themeContainer.style.backgroundColor = 'white';
+                heading.style.color = 'black';
+                themeToggleButton.textContent = 'Switch to Dark Theme';
+            } else {
+                // Switch to Dark Theme
+                themeContainer.style.backgroundColor = 'black';
+                heading.style.color = 'white';
+                themeToggleButton.textContent = 'Switch to Light Theme';
+            }
+        });
+    </pre>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle background color</title>
+    <link rel="stylesheet" href ='toggle.css' type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div id = 'colorBox' >Code Never Lies......
+        <br>
+        Comments SomeTimes d...</div>
+        <button id = "toggleButton">Toggle Button</button>
+    </div>
+
+<script>
+    const colorBox = document.getElementById('colorBox');
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', () => {
+        const currentColor = colorBox.style.backgroundColor;
+        if(currentColor === 'rgba(74, 115, 61, 0.94)') {
+            colorBox.style.backgroundColor = '#a37070';
+        } else {
+            colorBox.style.backgroundColor = 'rgba(74, 115, 61, 0.94)';
+        }
+    })
+</script>
+</body>
+</html>

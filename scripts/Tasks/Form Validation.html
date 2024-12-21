@@ -11,14 +11,88 @@
     </style>
 </head>
 <body>
-<form>
-    <label>Name:
-        <input type="text" id = "name">
-    </label>
-    <br>
-    <span id = "msg">*</span>
-    <button onsubmit= "return validate()">Submit</button>
-</form>
-<script src = "validate.js"></script>
+    <form>
+        <label>
+            First Name:
+            <input type="text" name = "firstname" id = "firstname">
+        </label>
+        <div id = "fn-feedback"></div>
+        <br>
+
+        <label>
+            Last Name:
+            <input type ="text" name = "lastname" id = "lastname">
+        </label>
+        <div id = "ln-feedback"></div>
+        <br>
+
+        <label>
+            <input type = "number" name = "age" id = "age">
+        </label>
+        <div id = "age-feedback"></div>
+        <label>
+            <button id = "submit">Submit</button>
+        </label>
+    </form>
+<script>
+    document.getElementById("firstname").addEventListener("input", function () {
+       const firstName = document.getElementById("firstname").value.trim();
+       const feedback_fn = document.getElementById("fn-feedback");
+       console.log(firstName);
+       feedback_fn.textContent = "";
+
+       if(firstName.length < 3) {
+           feedback_fn.classList.add("error");
+           feedback_fn.classList.remove("success");
+           feedback_fn.textContent = "Enter Your  Valid First Name";
+           feedback_fn.style.color = "red";
+       }
+       else {
+           feedback_fn.classList.add("success");
+           feedback_fn.classList.remove("error");
+           feedback_fn.textContent = "Valid First Name";
+           feedback_fn.style.color = "green";
+       }
+    });
+
+    document.getElementById("lastname").addEventListener("input", () => {
+        const lastName = document.getElementById("lastname").value.trim();
+        console.log(lastName);
+        const feedback_ln = document.getElementById("ln-feedback");
+        feedback_ln.textContent = "";
+
+        if(lastName.length < 2) {
+            feedback_ln.classList.add("error");
+            feedback_ln.classList.remove("success");
+            feedback_ln.textContent = "Enter Your Last Name";
+            feedback_ln.style.color = "red";
+        } else {
+            feedback_ln.classList.add("success");
+            feedback_ln.classList.remove("error");
+            feedback_ln.textContent = "Valid Last Name";
+            feedback_ln.style.color = "green";
+        }
+    });
+
+    document.getElementById("age").addEventListener("input", () => {
+        const ageValue = document.getElementById("age").value.trim();
+        console.log(ageValue);
+        const feedback_age = document.getElementById("age-feedback");
+        feedback_age.textContent = "Enter Your Age";
+
+        if(ageValue < 18 || ageValue > 99) {
+            feedback_age.classList.add("error");
+            feedback_age.classList.remove("success");
+            feedback_age.textContent = "Enter valid age. Must be between 18 and 99";
+            feedback_age.style.color = "red";
+        } else {
+            feedback_age.classList.add("success");
+            feedback_age.classList.remove("error");
+            feedback_age.textContent = "Valid Age";
+            feedback_age.style.color = "green";
+        }
+    });
+
+</script>
 </body>
 </html>
