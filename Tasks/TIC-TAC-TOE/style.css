@@ -1,0 +1,60 @@
+/* General body and font setup */
+body {
+    background: dimgrey;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the game container and make it responsive */
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+    gap: 10px; /* Space between buttons */
+    width: 80%; /* Responsive width */
+    max-width: 400px; /* Maximum width */
+    aspect-ratio: 1; /* Keeps it square */
+    margin: auto;
+}
+
+/* Style buttons inside the container */
+#game-container>button {
+    width: 100%; /* Full width of the grid cell */
+    height: 100%; /* Full height of the grid cell */
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: Background color for buttons */
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+button:hover {
+    background-color: #ddd; /* Optional: Hover effect */
+}
+
+/* Center the winner message */
+#winner {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #game-container {
+        width: 95%; /* Adjust for smaller screens */
+        max-width: 300px; /* Smaller max width */
+    }
+    body {
+        font-size: 18px; /* Reduce font size for small screens */
+    }
+}
